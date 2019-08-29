@@ -1,0 +1,70 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+  
+  .example-right-align {
+    text-align: right;
+  }
+  
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+  
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+  .max-width {
+    max-width: 1000px;
+}
+
+.upload-drop-zone {
+
+  border-width: 5px;  
+  border-style: dashed;
+  border-color: lightgray;
+
+  height: 200px;
+  background-color: rgb(247, 247, 247);
+  font-weight: bold;
+  text-align: center;
+}
+.vertical-center{
+
+  vertical-align: -100px;
+}
+.another-file-over-class {
+
+  border-width: 5px;  
+  border-style: dashed;
+  border-color: green;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+
+.radio-button {
+  margin: 5px;
+}
+
+#radio-group-label {
+  margin-top: 5px;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}

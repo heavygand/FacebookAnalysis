@@ -1,0 +1,56 @@
+<mat-toolbar color="primary">
+
+  <span class="title" >Facebook Analyse</span><!-- routerLink="/start" -->
+  <span class="example-spacer"></span>
+
+  <!-- <button mat-icon-button [matMenuTriggerFor]="menu" class="example-icon" *ngIf="data.getUser()">
+      <mat-icon>settings</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+      <a *ngIf="data.getUser() && data.getUser().id" routerLink="/user-settings" mat-menu-item >
+          <mat-icon>person</mat-icon>
+          <span>Benutzer</span>
+      </a>
+      <a *ngIf="data.getUser() && data.getUser().admin" routerLink="/admin" mat-menu-item >
+          <mat-icon>https</mat-icon>
+          <span>Administration</span>
+      </a>
+      <a *ngIf="data.getUser()" (click)="logout()" mat-menu-item >
+          <mat-icon>highlight_off</mat-icon>
+          <span>Logout</span>
+      </a>
+  </mat-menu> -->
+
+</mat-toolbar>
+
+<mat-card class="max-width">
+  <div class="example-container">
+
+    <mat-toolbar>
+      Anmeldung
+    </mat-toolbar>
+
+    <mat-form-field >
+      <input matInput placeholder="E-Mail Adresse" [formControl]="email">
+      <mat-error *ngIf="email.invalid">{{getEmailErrorMessage()}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Passwort" [type]="hide ? 'password' : 'text'" [formControl]="password">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+      <mat-error *ngIf="password.invalid">{{getPasswordErrorMessage()}}</mat-error>
+    </mat-form-field>
+
+    <button
+    mat-raised-button
+    color="primary"
+    [disabled]="!(email.value && password.value)"
+    (click)="login()"
+    >
+      Login
+    </button>
+
+  </div>
+</mat-card>

@@ -1,0 +1,60 @@
+<table mat-table *ngIf="friends[0]" [dataSource]="dataSource" class="mat-elevation-z8">
+    
+    <ng-container matColumnDef="fullName">
+        <th mat-header-cell *matHeaderCellDef> fullName </th>
+        <td mat-cell *matCellDef="let element"> {{element.fullName}} </td>
+    </ng-container>
+    
+    <ng-container matColumnDef="firstName">
+        <th mat-header-cell *matHeaderCellDef> firstName </th>
+        <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
+    </ng-container>
+    
+    <ng-container matColumnDef="gender">
+        <th mat-header-cell *matHeaderCellDef> gender </th>
+        <td mat-cell *matCellDef="let element"> {{element.gender}} </td>
+    </ng-container>
+    
+    <ng-container matColumnDef="alternateName">
+        <th mat-header-cell *matHeaderCellDef> alternateName </th>
+        <td mat-cell *matCellDef="let element"> {{element.alternateName}} </td>
+    </ng-container>
+    
+    <ng-container matColumnDef="userID">
+        <th mat-header-cell *matHeaderCellDef> userID </th>
+        <td mat-cell *matCellDef="let element"> {{element.userID}} </td>
+    </ng-container>
+    
+    <ng-container matColumnDef="isFriend">
+        <th mat-header-cell *matHeaderCellDef> isFriend </th>
+        <td mat-cell *matCellDef="let element"> {{element.isFriend}} </td>
+    </ng-container>
+    
+    <ng-container matColumnDef="profilePicture">
+        <th mat-header-cell *matHeaderCellDef> profilePicture </th>
+        <td mat-cell *matCellDef="let element"> {{element.profilePicture}} </td>
+    </ng-container>
+    
+    <ng-container matColumnDef="type">
+        <th mat-header-cell *matHeaderCellDef> type </th>
+        <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+    </ng-container>
+    
+    <ng-container matColumnDef="profileUrl">
+        <th mat-header-cell *matHeaderCellDef> profileUrl </th>
+        <td mat-cell *matCellDef="let element"> {{element.profileUrl}} </td>
+    </ng-container>
+    
+    <ng-container matColumnDef="vanity">
+        <th mat-header-cell *matHeaderCellDef> vanity </th>
+        <td mat-cell *matCellDef="let element"> {{element.vanity}} </td>
+    </ng-container>
+    
+    <ng-container matColumnDef="isBirthday">
+        <th mat-header-cell *matHeaderCellDef> isBirthday </th>
+        <td mat-cell *matCellDef="let element"> {{element.isBirthday}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
